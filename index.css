@@ -142,7 +142,7 @@ body {
 	span {
 		--color: #3050c2;
 		font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-		font-weight: 300;
+		font-weight: 700;
 		font-style: italic;
 		display: block;
 		position: absolute;
@@ -174,6 +174,59 @@ body {
 	}
 }
 
+.wrapper_2 {
+	font-size: 10vmin;
+	height: 2em;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	
+	&.invert {
+		span {
+			color: rgb(255, 248, 248);
+			
+			&::before {
+				-webkit-text-stroke: .1em var(--color);
+			}
+		}
+	}
+	
+	span {
+		--color: #3050c2;
+		font-family: Impact, 'Anton', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-weight: 700;
+		font-style: italic;
+		display: block;
+		position: absolute;
+		color: var(--color);
+		letter-spacing: -.0005em;
+
+		&::before, &::after {
+			content: attr(data-text);
+			display: block;
+			position: relative;
+			padding: 0 .1em;
+			z-index: 1;
+		}
+
+		&::before {
+			position: absolute;
+			-webkit-text-stroke: .1em black;
+			z-index: 0;
+		}
+
+		&:first-child {
+			transform: translate(-.255em, -.25em);
+		}
+
+		&:last-child {
+			--color: #3d3dec;
+			transform: translate(.255em, .25em);
+		}
+	}
+}
 
 
 
