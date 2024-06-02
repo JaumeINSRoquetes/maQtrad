@@ -10,7 +10,6 @@ async function inicia_video() {
     await webcam.setup();
     await webcam.play();
     window.requestAnimationFrame(loop);    // bucle
-    document.getElementById("icona_video").style.display = "none";    // oculta la icona de la càmera de vídeo
     document.getElementById("coincidencia").style.display = "flex";    // mostra el text amb la predicció de coincidències
     document.getElementById("webcam-container").appendChild(webcam.canvas);
     prediccions = document.getElementById("prediccions");

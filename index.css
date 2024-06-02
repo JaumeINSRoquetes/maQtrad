@@ -91,36 +91,9 @@ body {
     #seccio_0 {
         flex-direction: row;
     }
-    #llista_fotos {
-        height: 70vmin;
-    }
+    
 }
-#llista_titol {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-#llista_titol i {
-    font-size: 4vmax;
-    color:#950E17;
-}
-#llista_titol i:nth-child(1) {    /* primer <i> (miniatura de la foto) */
-    flex: 2;
-}
-#llista_titol i:nth-child(2) {    /* segon <i> (data i hora) */
-    flex: 3;
-}
-#llista_titol i:nth-child(3) {    /* tercer <i> (icona per esborrar la foto) */
-    flex: 1;
-}
-#llista_fotos {
-    height: 70vmax;
-    overflow-y: scroll;
-}
-#llista_fotos::-webkit-scrollbar {
-    display: none;    /* oculta la barra de desplaçament vertical */
-}
+
 .ocult {
     display: none !important;    /* amb prioritat sobre les declaracions condicionals segons l'orientació */
 }
