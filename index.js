@@ -6,10 +6,11 @@ async function inicia_video() {
     const metadataURL = tmURL + "/metadata.json";
     model = await tmImage.load(modelURL, metadataURL);
     maxPrediccions = model.getTotalClasses();    // nombre de tipus d'imatges per reconèixer
-    webcam = new tmImage.Webcam(400, 600, true);    // posada en marxa de la webcam
+    webcam = new tmImage.Webcam(600, 600, true);    // posada en marxa de la webcam
     await webcam.setup();
     await webcam.play();
     window.requestAnimationFrame(loop);    // bucle
+    document.getElementById("text_inicial").style.display = "none";
     document.getElementById("coincidencia").style.display = "flex";    // mostra el text amb la predicció de coincidències
     document.getElementById("webcam-container").appendChild(webcam.canvas);
     prediccions = document.getElementById("prediccions");
