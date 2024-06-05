@@ -1,0 +1,128 @@
+html { 
+    height: -webkit-fill-available;    /* per a dispositius mòbils */
+}
+body {
+    display: flex;    /* tipus de display que ofereix més prestacions que block */
+    flex-direction: column;    /* els elements es disposen de dalt cap abaix */
+    justify-content: space-between;    /* els elements, separats per espais, ocupen tot l'espai disponibles */
+    min-height: 100vh;    /* alçària de la pantalla en navegadors d'escriptori */
+    min-height: 100svh;    /* per a navegadors on la declaració anterior no és precisa */
+    min-height: -webkit-fill-available;    
+    margin: 0px;    /* elimina tots els marges del document */
+    font-family: sans-serif;    /* un tipus de lletra adient per a llocs web */
+    background-color: #82E365;    /* color de fons en format #RRGGBB */
+}
+#superior {
+    display: flex;
+    height: 8vmax;    /* alçària d'un 8% respecte l'alçària de la pantalla */
+    justify-content: center;    /* centra els elements en la direcció de disposició */
+    align-items: center;    /* centra els elements en la direcció perpendicular a la de disposició */
+    font-size: 6vmax;    /* mida d'un 4% respecte l'alçària de la pantalla */
+    color: rgb(178 101 227);    /* color del text */
+    background-color: #F7FF75;    /* color de fons */
+}
+.seccio {
+    flex: 1;    /* les seccions ocupen tot l'espai disponible */
+    display: none;    /* les seccions s'inicien ocultes, excepte la primera */
+}
+#seccio_0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vmax;
+}
+
+#menu {
+    display: flex;    /* el menú és un contenidor de tipus flex */
+    height: 8vmax;
+}
+#menu i{
+    flex: 1;    /* cada botó pretén ocupar tot l'espai disponible */
+    display: flex;    /* contenidor flex on centrar-hi la icona */
+    justify-content: center;
+    align-items: center;
+    color: rgb(12 35 205);
+    background-color: #658DE3;
+    font-size: 5vmax;
+    cursor: pointer;    /* en ordinadors, indica que s'hi pot fer clic */
+}
+
+#foto {
+    max-width: 60vmin;    /* dimensions màximes per a la prveisualització de les fotos */
+    max-height: 60vmin;
+    cursor: pointer;
+}
+#div_control {
+    height: 25vmax;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#div_control i {
+    cursor: pointer;
+    font-size: 20vmin;    
+    color: green;
+}
+#div_gran {
+    display: none;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    max-height: 100vh;
+    max-height: 100svh;
+    max-height: -webkit-fill-available;
+}
+
+@media (orientation: landscape) {
+    #div_control {
+        width: 25vmax;
+        height: auto;
+        flex-direction: column;
+    }
+    #div_gran {
+        max-height: 100vh;
+        max-height: 100svh;
+    }
+    #foto_gran {
+        transform: rotate(-90deg);    /* gir de 90 graus correponent al canvi d'orientació */
+    }
+    #seccio_0 {
+        flex-direction: row;
+    }
+    
+}
+
+.ocult {
+    display: none !important;    /* amb prioritat sobre les declaracions condicionals segons l'orientació */
+}
+#webcam-container {
+    margin: 2vh;
+}
+#reconeixement {
+    text-align:normal;
+}
+#coincidencia {
+    display: none;    /* es farà visible quan es comencin a tenir dades */
+    justify-content: center;
+    font-size: 4vh;
+    margin-bottom: 1vh;
+}
+#text_inicial {
+    display: flex;
+    justify-content: center;
+    font-family: "Papyrus", fantasy;
+    font-size: 15vh;
+}
+
+#prediccions {
+    justify-content: left;
+    font-size: 3vh;
+}
+
+
+
+
+
+
