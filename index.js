@@ -1,6 +1,6 @@
 let model, webcam, prediccions, maxPrediccions;
 async function inicia_video() {
-    const codi_model = "Y4SymB5UV"    // substitueix els asteriscs pel codi del model d'IA que vas crear en una activitat anterior
+    const codi_model = "DrsGZa5i4"    // substitueix els asteriscs pel codi del model d'IA que vas crear en una activitat anterior
     const tmURL = "https://teachablemachine.withgoogle.com/models/" + codi_model;
     const modelURL = tmURL + "/model.json";
     const metadataURL = tmURL + "/metadata.json";
